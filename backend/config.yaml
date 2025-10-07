@@ -1,0 +1,28 @@
+camera:
+  # Default camera source for monitoring.  Use an integer for a local
+  # webcam (0 = first camera) or a URL such as rtsp://user:pass@host/…
+  source: 0
+  fps: 8
+  downscale_width: 0  # 0 means no downscaling
+
+recognition:
+  threshold: 0.50       # similarity threshold to mark a person as "IN"
+  threshold_out: 0.45   # lower threshold to mark a person as "OUT"
+  absence_timeout_sec: 75
+  min_face_ratio: 0.05  # minimum fraction of the frame a face must occupy
+  smoothing_window: 3   # number of frames used for temporal smoothing
+  hits_to_confirm: 2    # consecutive hits required before logging an IN event
+  unknown_save_score_max: 0.35
+  unknown_save_min_interval_sec: 10
+
+enroll:
+  min_face_px: 110
+  min_brightness: 60
+  min_sharpness: 80
+
+ui:
+  window_width: 1280
+  show_debug: true
+
+storage:
+  db_path: "db.sqlite"
