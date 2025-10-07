@@ -1,0 +1,17 @@
+# Ignore Python caches and virtual environments
+__pycache__/
+.venv/
+
+# Ignore database and runtime directories
+backend/db.sqlite
+portraits/
+unknowns/
+
+# Node build artefacts
+client/node_modules/
+client/build/
+client/.cache/
+
+# IDE files
+.DS_Store
+*.swp
